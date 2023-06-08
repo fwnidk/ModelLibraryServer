@@ -1,4 +1,4 @@
-const JWT = require("../app/JWT");
+const JWT = require("../app/jwt");
 const LoginService = require('../services/LoginService')
 const LoginController = {
     login: async (req, res) => {

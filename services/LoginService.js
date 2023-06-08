@@ -1,4 +1,4 @@
-const LoginModel = require("../model/LoginModel")
+const LoginModel = require("../model/UserModel")
 
 const LoginService = {
     login: async (body) => {

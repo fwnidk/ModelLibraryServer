@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 const Schema = mongoose.Schema
-const Type = {
+const UserType = {
     activeFilters: {
         task: [String],
         size: [String],
@@ -18,6 +18,6 @@ const Type = {
     isPrivate: Boolean //前端给 √
 }
 
-const DatasetListModel = mongoose.model("datasetList", new Schema(Type))
+const DatasetModel = mongoose.model("datasetDetail", new Schema(UserType))
 // 模型user 将会对应 users 集合, 
-module.exports = DatasetListModel
+module.exports = DatasetModel

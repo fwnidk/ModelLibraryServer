@@ -1,11 +1,13 @@
 const Router = require('express')
-const TestController = require('../controllers/TestController')
+const ItemController = require('../controllers/ItemController')
 const jwtVerification = require('../app/jwtVerification');
 
 var router = Router();
 
 /* GET home page. */
+router.get('/', ItemController.getItem);
+
 router.use(jwtVerification())
-router.get('/', TestController.getList);
+router.post('/', ItemController.postItem);
 
 module.exports = router

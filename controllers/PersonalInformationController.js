@@ -2,15 +2,15 @@ const PersonalInformationService = require('../services/PersonalInformationServi
 const JWT = require("../app/jwt");
 const TestController = {
     getPersonalInformation: async (req, res) => {
-        console.log('jwtVerification');
+        // console.log('jwtVerification');
         // let urlArr = req.baseUrl.split('/')
         // let currURL = urlArr[urlArr.length - 1]
         // console.log('currURL: ', currURL);
         const token = req.headers["authorization"]?.split(" ")[1]
-        console.log('token: ', token);
+        // console.log('token: ', token);
         if (token) {
             const payload = JWT.verify(token)
-            console.log('payload: ', payload);
+            // console.log('payload: ', payload);
             if (payload) {
                 //重新计算token过期时间
                 const newToken = JWT.generate({

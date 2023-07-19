@@ -1,13 +1,13 @@
 const jwt = require("jsonwebtoken")
 const secret = "fwnidkfwindk"
 const JWT = {
-    generate(value,expires){
-        return jwt.sign(value,secret,{expiresIn:expires})
+    generate(value, expires) {
+        return jwt.sign(value, secret, { expiresIn: expires })
     },
 
-    verify(token){
+    verify(token) {
         try {
-            return jwt.verify(token,secret)
+            return jwt.verify(token, secret)
         } catch (error) {
             return false
         }

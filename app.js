@@ -18,7 +18,7 @@ app.use('/images', (req, res, next) => {
     // 检查文件是否存在
     fs.access(filePath, fs.constants.F_OK, (err) => {
       if (err) {
-        console.log('图片请求处理err');该
+        console.log('图片请求处理err');
         // 文件不存在，继续传递请求
         next();
       } else {

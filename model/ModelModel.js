@@ -19,6 +19,6 @@ const Type = {
     isPrivate: Boolean
 }
 
-const ModelListModel = mongoose.model("modelList",new Schema(Type))
+const ModelModel = mongoose.model("modelDetail", new Schema(Type))
 // 模型user 将会对应 users 集合, 
-module.exports = ModelListModel
+module.exports = ModelModel
